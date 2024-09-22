@@ -31,31 +31,21 @@
         </div>
     </aside>
 
-    <!-- Container for Text Boxes and Buttons -->
+    <!-- Container for Text Boxes -->
     <div class="container">
         <section class="music-section">
-            <!-- First Text Box with Back Button -->
+            <!-- First Text Box -->
             <div class="music-box">
                 <textarea placeholder="Type your message here..." rows="10" cols="30"></textarea>
-                <button class="back-btn" onclick="goBack()">Back</button>
             </div>
 
-            <!-- Second Text Box with Submit Button -->
+            <!-- Second Text Box -->
             <div class="music-box">
                 <textarea placeholder="Type your message here..." rows="10" cols="30"></textarea>
-                <button class="submit-btn" onclick="submitMessage()">Submit</button>
             </div>
         </section>
     </div>
 
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-
-        function submitMessage() {
-            alert("Message submitted!");
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
