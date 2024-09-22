@@ -1,0 +1,313 @@
+/* General Reset and Layout Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #f5a623, #8e44ad);
+    color: white;
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Transparent Header Bar */
+.header {
+    width: 100%;
+    padding: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    z-index: 1000; /* Header should stay below the menu */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    height: 120px;
+    width: auto;
+}
+
+/* Main Content Container */
+.container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 20px 20px; /* To avoid overlap with header */
+}
+
+/* Sidebar Menu (initially hidden) */
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.95);
+    position: fixed;
+    right: -300px; /* Start hidden */
+    top: 0;
+    padding: 20px;
+    transition: right 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2000; /* Above the transparent header */
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+/* Sidebar Menu Button */
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1100; /* Ensure button remains clickable */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transition: right 0.5s ease; /* Smooth transition for button */
+}
+
+.menu-btn.shifted {
+    right: 320px; /* Move button outside the open sidebar */
+}
+
+/* Sidebar Menu List */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 0;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align text and icons */
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    background-color: #555;
+}
+
+/* Icons inside the menu */
+.sidebar ul li img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+/* Profile Icon in the Sidebar */
+.profile-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.profile-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.music-day {
+    flex-basis: 40%;
+}
+
+.music-box {
+    width: 500px;
+    height: 500px;
+    background-color: #16131331;
+    border: 8px solid rgba(255, 255, 255, 0.5); /* Thicker border */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #cccccc;
+}
+
+.welcome-box {
+    flex-basis: 50%;
+    text-align: center; /* Center alignment */
+}
+
+.welcome-box h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* Playlist and Preferences Buttons */
+.playlist-btn, .preferences-btn {
+    display: block;
+    background-color: rgba(53, 47, 47, 1);
+    color: white;
+    padding: 0; /* Removed padding to fit exact size */
+    width: 584px; /* Set width to 584px */
+    height: 85px; /* Set height to 85px */
+    border: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif; /* Set font to Arial Rounded MT Bold */
+    font-size: 24px; /* Font size appropriate for button */
+    text-align: center;
+    line-height: 85px; /* Center text vertically */
+    font-weight: bold; /* Make the font bold */
+    transition: background-color 0.3s ease;
+}
+
+.playlist-btn:hover, .preferences-btn:hover {
+    background-color: #444444;
+}
+
+
+/* Theme Section */
+.theme-section {
+    text-align: left;
+    padding: 40px 0;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 50px; /* Space between sections */
+    border-top: 2px solid white; /* White line above the section */
+}
+
+.theme-section h2 {
+    font-family: 'Times New Roman', Times, serif; /* Set font to Times New Roman */
+    font-weight: 900; /* Extra bold for the title */
+    font-size: 50px; /* Adjust size as needed */
+    margin-bottom: 10px;
+    color: white;
+}
+
+.theme-section p {
+    font-family: 'Times New Roman', Times, serif; /* Set font to Times New Roman */
+    font-weight: bold; /* Bold for the paragraph */
+    font-size: 30px;
+    color: white;
+}
+
+
+/* Transition for Sidebar */
+.sidebar.open .menu-btn {
+    position: relative;
+    right: 300px;
+    z-index: 2100;
+}
+
+/* Music Section for two boxes */
+.music-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto; /* Center vertically on page */
+}
+
+/* Music Box */
+.music-box {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    font-size: 20px;
+    color: #cccccc;
+    border: 4px solid white; /* Optional border for design consistency */
+}
+
+/* Music Section for text boxes */
+.music-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+/* Text Box (Replacing Music Box) */
+.music-box {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid white;
+}
+
+/* Text Area Styling */
+textarea {
+    width: 90%;
+    height: 90%;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    border-radius: 8px;
+}
+
+/* Placeholder text color */
+textarea::placeholder {
+    color: #cccccc;
+}
+
+button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.back-btn {
+    background-color: #FF6347;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+}

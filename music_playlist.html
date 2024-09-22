@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Playlist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Transparent Header with Logo and Menu Button -->
+    <header class="header">
+        <div class="logo">
+            <img src="2REVIBE.png" alt="Logo">
+        </div>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <aside class="sidebar">
+        <ul>
+            <li><img src="Emotion_recognition_ICON.png" alt=""> Emotion Recognition</li>
+            <li><img src="Sleep_Enchancer_icon.png" alt=""> Sleep Enhancer</li>
+            <li><img src="stress_reliever_icon.png" alt=""> Stress Relaxer</li>
+            <li><img src="Mood_history_icon.png" alt=""> Mood History</li>
+            <li><img src="Environment_adaptation_icon.png" alt=""> Environment Adaptation</li>
+            <li><img src="Evaluation_form_icon.png" alt=""> Evaluation Form</li>
+            <li><img src="User_agreement_icon.png" alt=""> User Agreement</li>
+        </ul>
+        <div class="profile-icon">
+            <img src="profile_icon.png" alt="Profile Icon">
+        </div>
+    </aside>
+
+    <!-- Container for Text Boxes and Buttons -->
+    <div class="container">
+        <section class="music-section">
+            <!-- First Text Box with Back Button -->
+            <div class="music-box">
+                <textarea placeholder="Type your message here..." rows="10" cols="30"></textarea>
+                <button class="back-btn" onclick="goBack()">Back</button>
+            </div>
+
+            <!-- Second Text Box with Submit Button -->
+            <div class="music-box">
+                <textarea placeholder="Type your message here..." rows="10" cols="30"></textarea>
+                <button class="submit-btn" onclick="submitMessage()">Submit</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function submitMessage() {
+            alert("Message submitted!");
+        }
+    </script>
+</body>
+</html>

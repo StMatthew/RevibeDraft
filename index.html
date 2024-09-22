@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revibe Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="2REVIBE.png" alt="Revibe Logo">
+        </div>
+        <div class="menu">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="welcome-section">
+            <div class="music-day">
+                <div class="music-box">Music for the Day</div>
+            </div>
+            <div class="welcome-box">
+                <h1>Welcome Back <span id="username">&lt;USERNAME&gt;</span></h1>
+                <!-- Redirect to music_playlist.html when clicked -->
+                <button class="playlist-btn" onclick="redirectToPlaylist()">Time for a Music Playlist</button>
+                <button class="preferences-btn">Preference Settings</button>
+            </div>
+        </section>
+
+        <section class="theme-section">
+            <h2>&lt;TITLE OF TODAY'S THEME&gt;</h2>
+            <p>Discover numerous soundtracks from &lt;Year Range of Music&gt;</p>
+        </section>
+    </div>
+
+    <!-- Menu Content -->
+    <aside class="sidebar" id="menu-content">
+        <ul>
+            <li><img src="Emotion_recognition_ICON.png" alt="Emotion Recognition Icon">Emotion Recognition</li>
+            <li><img src="Sleep_Enchancer_icon.png" alt="Sleep Enhancer Icon">Sleep Enhancer</li>
+            <li><img src="stress_reliever_icon.png" alt="Stress Reliever Icon">Stress Relaxer</li>
+            <li><img src="mood_history_icon.png" alt="Mood History Icon">Mood History</li>
+            <li><img src="environment_adaptation_icon.png" alt="Environment Adaptation Icon">Environment Adaptation</li>
+            <li><img src="evaluation_form_icon.png" alt="Evaluation Form Icon">Evaluation Form</li>
+            <li><img src="user_agreement_icon.png" alt="User Agreement Icon">User Agreement</li>
+        </ul>
+        <!-- Profile Icon at the bottom -->
+        <div class="profile-icon">
+            <img src="profile_icon.png" alt="Profile Icon">
+        </div>
+    </aside>
+
+    <!-- Include the script for redirect -->
+    <script src="script.js"></script>
+</body>
+</html>
