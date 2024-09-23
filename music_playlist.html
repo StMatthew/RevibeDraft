@@ -7,45 +7,56 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Transparent Header with Logo and Menu Button -->
+    <!-- Transparent header with logo and menu button -->
     <header class="header">
         <div class="logo">
-            <img src="2REVIBE.png" alt="Logo">
+            <img src="2REVIBE.png" alt="Revibe Logo">
         </div>
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <div class="menu">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </div>
     </header>
 
-    <!-- Sidebar Menu -->
-    <aside class="sidebar">
+    <!-- Container for music playlist page -->
+    <div class="container">
+        <!-- Two Music Boxes -->
+        <section class="music-section">
+            <div class="music-box">
+                <h2>UPLOAD A SELFIE</h2>
+                <input type="file" class="file-input">
+            </div>
+
+            <div class="music-box">
+                <h2>DESCRIBE HOW YOU FEEL</h2>
+                <textarea class="describe-input" placeholder="Type your feelings..."></textarea>
+            </div>
+        </section>
+
+        <!-- Back and Submit Buttons -->
+        <div class="button-container">
+            <button class="back-button" onclick="window.location.href='index.html'">← Back</button>
+            <button class="submit-button" onclick="window.location.href='submit.html'">Submit</button>
+        </div>
+    </div>
+
+    <!-- Sidebar menu -->
+    <aside class="sidebar" id="menu-content">
         <ul>
-            <li><img src="Emotion_recognition_ICON.png" alt=""> Emotion Recognition</li>
-            <li><img src="Sleep_Enchancer_icon.png" alt=""> Sleep Enhancer</li>
-            <li><img src="stress_reliever_icon.png" alt=""> Stress Relaxer</li>
-            <li><img src="Mood_history_icon.png" alt=""> Mood History</li>
-            <li><img src="Environment_adaptation_icon.png" alt=""> Environment Adaptation</li>
-            <li><img src="Evaluation_form_icon.png" alt=""> Evaluation Form</li>
-            <li><img src="User_agreement_icon.png" alt=""> User Agreement</li>
+            <li><img src="Emotion_recognition_ICON.png" alt="Emotion Recognition Icon">Emotion Recognition</li>
+            <li><img src="Sleep_Enchancer_icon.png" alt="Sleep Enhancer Icon">Sleep Enhancer</li>
+            <li><img src="stress_reliever_icon.png" alt="Stress Reliever Icon">Stress Relaxer</li>
+            <li><img src="mood_history_icon.png" alt="Mood History Icon">Mood History</li>
+            <li><img src="environment_adaptation_icon.png" alt="Environment Adaptation Icon">Environment Adaptation</li>
+            <li><img src="evaluation_form_icon.png" alt="Evaluation Form Icon">Evaluation Form</li>
+            <li><img src="user_agreement_icon.png" alt="User Agreement Icon">User Agreement</li>
         </ul>
+        <!-- Profile Icon at the bottom -->
         <div class="profile-icon">
             <img src="profile_icon.png" alt="Profile Icon">
         </div>
     </aside>
 
-    <!-- Container for Text Boxes -->
-    <div class="container">
-        <section class="music-section">
-            <!-- First Text Box -->
-            <div class="music-box">
-                <textarea placeholder="Type your message here..." rows="10" cols="30"></textarea>
-            </div>
-
-            <!-- Second Text Box -->
-            <div class="music-box">
-                <textarea placeholder="Type your message here..." rows="10" cols="30"></textarea>
-            </div>
-        </section>
-    </div>
-
+    <!-- Include the JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
